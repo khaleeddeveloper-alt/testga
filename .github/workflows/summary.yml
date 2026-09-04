@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  html_summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Alert
+        run: |
+          echo '<div style="background:#ffcc00;padding:10px;border-radius:5px;font-size:16px;">⚠️ Warning: API rate limit reached!</div>' >> $GITHUB_STEP_SUMMARY
