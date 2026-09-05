@@ -6,6 +6,7 @@ on:
         required: true
         default: "Staging"
         type: choice
+        options:
           - Staging
           - Production
           
