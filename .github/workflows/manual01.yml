@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy applicaiton
-        run: echo "Deploy application manual"
+        run: echo "Deploy application manual, you are in ${{inputs.environment}}"
