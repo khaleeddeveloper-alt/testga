@@ -5,6 +5,12 @@ jobs:
     actions-job:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout repositroy
-              uses: actions/checkout@v7.0.1
+            - name: say hello
+              uses: .github/actions/Greeting@v1 ###actions/checkout@v7.0.1  ###owner-name-refer commit
+              with:
+                  name: Khaled
+              env:
+                  GITHUB_TOKE: ${{secrets.GITHUB_TOKEN}}
+
+                  
               
