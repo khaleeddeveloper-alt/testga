@@ -1,1 +1,26 @@
+on:
+    workflow_dispatch:
 
+jobs:
+    hybrid_job:
+        runs-on: ubuntu-latest
+        steps:
+         - name: run on Vm directly
+           run: echo "Run on VM"
+         - name: Run isnside ALpine container
+           uses: docker://alpine:3.14
+           with:
+             entrypoint: /bin/sh
+             args: |
+               -c "echo 'Echo this insdie alpine container'"
+          - name: run another command inside vm
+            run echo "Back to VM run"
+
+
+      dockerized_job:
+        runs-on: ubuntu-latest
+           
+           
+                 
+             
+        
